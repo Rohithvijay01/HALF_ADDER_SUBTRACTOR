@@ -35,6 +35,8 @@ Figure -02 HALF Subtractor
 
 **Truthtable**
 
+![313679154-cb8f7e8f-c25e-435c-92de-578a17e44752](https://github.com/Hezron-lix/HALF_ADDER_SUBTRACTOR/assets/139331337/f054018f-219b-4b58-85b2-be728594c318)
+
 **Procedure**
 
 1.	Type the program in Quartus software.
@@ -52,10 +54,37 @@ Figure -02 HALF Subtractor
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:*/
+**Half_adder**
+module halfadd_top(a,b,sum,carry);
+input a,b;
+output sum,carry; 
+ assign sum = a^b;
+ assign carry = a & b;
+endmodule
+
+**Half_subtractor**
+module halfsub_top(a,b,D,Bo);
+input a,b;
+output D,Bo; // Outputs sum and carry for half adder:Outputs difference D,Borrow Bo for half subtractor
+assign D = a ^ b;
+  assign Bo = ~a & b;
+endmodule
+
+Developed by: ROHITH V
+RegisterNumber: 212223040174
+
 
 **RTL Schematic**
 
+![313680134-43c4f5f0-2b6c-4569-b796-7ea159dbfd66](https://github.com/Hezron-lix/HALF_ADDER_SUBTRACTOR/assets/139331337/b8fcda97-0438-4190-852b-a0028ff5adbe)
+
 **Output/TIMING Waveform**
 
+Half_adder
+![313679882-c4ff84e0-e081-4224-acbd-374413d10763](https://github.com/Hezron-lix/HALF_ADDER_SUBTRACTOR/assets/139331337/18b3bcfe-6a65-4d24-8874-4420091953fa)
+
+Half_subtractor
+![313680044-bfc83070-f266-4260-aa7d-9a60a2af1167](https://github.com/Hezron-lix/HALF_ADDER_SUBTRACTOR/assets/139331337/fb1a88d1-5862-480f-983c-18c6c2639d66)
+
 **Result:**
+The code is excecuted successfully.
